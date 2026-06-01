@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz Brusque</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+
+<body>
+
+    <div class="fundo"></div>
+
+    <div class="container" id="quiz">
+
+        <h1>12 - Associe o número ao lugar correto de Brusque</h1>
+
+        <div class="associacao">
+
+            <div class="linha">
+                <p>Paróquia São Luís Gonzaga</p>
+
+                <select id="paroquia">
+                    <option value="">Escolha</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+
+            <div class="linha">
+                <p>Praça das Bandeiras</p>
+
+                <select id="praca">
+                    <option value="">Escolha</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+
+            <div class="linha">
+                <p>Pavilhão da Fenarreco</p>
+
+                <select id="fenarreco">
+                    <option value="">Escolha</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+
+        </div>
+
+        <div class="fotos">
+
+            <div class="foto-card">
+                <h2>1</h2>
+                <img src="fena.png" alt="">
+            </div>
+
+            <div class="foto-card">
+                <h2>2</h2>
+                <img src="igreja.png" alt="">
+            </div>
+
+            <div class="foto-card">
+                <h2>3</h2>
+                <img src="praca.png" alt="">
+            </div>
+
+        </div>
+
+        <button onclick="verificar()">Verificar</button>
+
+    </div>
+
+    <div class="erro" id="telaErro">
+
+        <h1>TENTE NOVAMENTE</h1>
+
+        <button onclick="voltar()">Voltar</button>
+
+    </div>
+
+    <script>
+
+        function verificar() {
+
+            let paroquia = document.getElementById("paroquia").value;
+            let praca = document.getElementById("praca").value;
+            let fenarreco = document.getElementById("fenarreco").value;
+
+            if (paroquia == "2" && praca == "3" && fenarreco == "1") {
+
+                alert("Parabéns! Você acertou!");
+
+                // próxima página
+                window.location.href = "Pag14.html";
+
+            } else {
+
+                document.getElementById("quiz").style.display = "none";
+                document.getElementById("telaErro").style.display = "block";
+            }
+        }
+
+        function voltar() {
+
+            document.getElementById("quiz").style.display = "block";
+            document.getElementById("telaErro").style.display = "none";
+        }
+
+    </script>
+
+</body>
+
+</html>

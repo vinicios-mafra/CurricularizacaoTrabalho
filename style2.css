@@ -1,0 +1,108 @@
+body{
+    margin: 0;
+    font-family: Arial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.fundo{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url("/Fundo3.png");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.container{
+    width: 700px;
+    background-color: #ececec;
+    padding: 50px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+h1{
+    color: #1f7a36;
+    font-size: 42px;
+    margin-bottom: 30px;
+}
+
+.quiz{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.opcao{
+    background-color: #f5f5f5;
+    padding: 15px;
+    min-height: 250px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.opcao:hover{
+    transform: scale(1.05);
+    background-color: #e0e0e0;
+}
+
+.opcao img{
+    width: 170px;
+    height: 170px;
+    object-fit: contain;
+    margin-top: 10px;
+}
+
+h2{
+    color: #1f7a36;
+    text-align: left;
+    margin-left: 10px;
+    font-size: 28px;
+}
+
+h3{
+    color: #1f7a36;
+    text-align: center;
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+/* TELA DE ERRO */
+
+.erro{
+    display: none;
+    width: 500px;
+    background-color: #ececec;
+    padding: 70px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.erro h1{
+    color: red;
+    font-size: 55px;
+}
+
+button{
+    padding: 15px 30px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #1f7a36;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover{
+    background-color: #145224;
+}

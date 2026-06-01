@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz Brusque</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+
+    <div class="fundo"></div>
+
+    <div class="container" id="quiz">
+
+        <h1>10 -  Como as pessoas atravessavam o rio da cidade antigamente?</h1>
+
+        <div class="quiz">
+
+            <!-- OPÇÃO A -->
+            <div class="opcao" onclick="errado()">
+                <h2>A</h2>
+                <img src="nadando.PNG" alt="">
+            </div>
+
+            <!-- OPÇÃO B (CORRETA) -->
+            <div class="opcao" onclick="errado()">
+                <h2>B</h2>
+                <img src="carro.PNG" alt="">
+            </div>
+
+            <!-- OPÇÃO C -->
+            <div class="opcao" onclick="certo()">
+                <h2>C</h2>
+                <img src="barco.PNG" alt="">
+            </div>
+
+            <!-- OPÇÃO D -->
+            <div class="opcao" onclick="errado()">
+                <h2>D</h2>
+                <img src="andando.PNG" alt="">
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- TELA DE ERRO -->
+    <div class="erro" id="telaErro">
+
+        <h1>TENTE NOVAMENTE</h1>
+
+        <button onclick="voltar()">Voltar</button>
+
+    </div>
+
+    <script>
+
+        function errado() {
+
+            document.getElementById("quiz").style.display = "none";
+            document.getElementById("telaErro").style.display = "block";
+
+        }
+        
+        function voltar() {
+
+            document.getElementById("quiz").style.display = "block";
+            document.getElementById("telaErro").style.display = "none";
+
+        }
+
+        function certo() {
+
+            window.location.href = "Pag12.html";
+
+        }
+
+    </script>
+
+</body>
+
+</html>

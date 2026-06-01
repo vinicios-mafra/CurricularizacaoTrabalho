@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz Brusque</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+
+<body>
+
+    <div class="fundo"></div>
+
+    <div class="container" id="quiz">
+
+        <h1>2 - Associe o número do lugar indicado com sua foto</h1>
+
+        <div class="associacao">
+
+            <div class="linha">
+                <p>Parque das Esculturas</p>
+
+                <select id="parque">
+                    <option value="">Escolha</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+
+            <div class="linha">
+                <p>Prefeitura de Brusque</p>
+
+                <select id="prefeitura">
+                    <option value="">Escolha</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+
+            <div class="linha">
+                <p>Zoo Botânico</p>
+
+                <select id="zoo">
+                    <option value="">Escolha</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+
+        </div>
+
+        <div class="fotos">
+
+            <div class="foto-card">
+                <h2>1</h2>
+                <img src="prefeitura.png" alt="">
+            </div>
+
+            <div class="foto-card">
+                <h2>2</h2>
+                <img src="parque das esculturas.png" alt="">
+            </div>
+
+            <div class="foto-card">
+                <h2>3</h2>
+                <img src="zoobotanico.png" alt="">
+            </div>
+
+        </div>
+
+        <button onclick="verificar()">Verificar</button>
+
+    </div>
+
+    <div class="erro" id="telaErro">
+
+        <h1>TENTE NOVAMENTE</h1>
+
+        <button onclick="voltar()">Voltar</button>
+
+    </div>
+
+    <script>
+
+        function verificar() {
+
+            let parque = document.getElementById("parque").value;
+            let prefeitura = document.getElementById("prefeitura").value;
+            let zoo = document.getElementById("zoo").value;
+
+            if (parque == "2" && prefeitura == "1" && zoo == "3") {
+
+                alert("Parabéns! Você acertou!");
+
+                // próxima página
+                window.location.href = "Pag4.html";
+
+            } else {
+
+                document.getElementById("quiz").style.display = "none";
+                document.getElementById("telaErro").style.display = "block";
+            }
+        }
+
+        function voltar() {
+
+            document.getElementById("quiz").style.display = "block";
+            document.getElementById("telaErro").style.display = "none";
+        }
+
+    </script>
+
+</body>
+
+</html>
